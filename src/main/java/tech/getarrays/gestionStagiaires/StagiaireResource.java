@@ -47,7 +47,7 @@ public class StagiaireResource {
 
     }
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?> deleteStagiaire(@PathVariable("id") Long id)
+    public ResponseEntity<Stagiaire> deleteStagiaire(@PathVariable("id") Long id)
     {
          stagiaireService.deleteStagiaire(id);
         return new ResponseEntity<>(HttpStatus.OK);

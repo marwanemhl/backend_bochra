@@ -38,6 +38,6 @@ public class StagiaireService {
        return stagiaireRepo.findStagiaireById(id).orElseThrow(()->new UserNotFoundException("User by id "+id+ "was not found "));
     }
     public void deleteStagiaire(Long id){
-        stagiaireRepo.deleteStagiaireById(id);
+        stagiaireRepo.deleteById(id);
     }
 }
